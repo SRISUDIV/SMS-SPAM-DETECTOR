@@ -1,0 +1,52 @@
+
+<html>
+<head>
+<title>Spam message & link finder</title>
+
+<style>
+.main{
+width:100%;
+justify-content:center;
+display:flex;
+height:auto;
+}
+input[type="text"]{
+width:300px;
+background:transparent;
+border:none;
+border-bottom:2px solid black;
+}
+</style>
+</head>
+
+<body style="background:pink;">
+<center><h1>Enter your Link to check !</h1></center>
+
+
+<div class="main" style="margin-top:20%;">
+<input type="text" id="txt">
+<input style="background:red; position:absolute;margin-top:40px; color:#fff; border:none; width:80px; height:30px;cursor:pointer;" type="submit" value="check" id="txt" onclick="myfun()"> 
+</div>
+
+<script>
+function myfun(){
+
+var text = document.getElementById("txt").value;
+
+var sub = text.substring(0,8);
+
+
+if(sub==="https://"||sub==="HTTPS://"||sub==="Https://"){
+alert("Safe link");
+}
+else if(sub===""){
+alert("Dont give any space before checking!");
+}
+
+else{
+alert("Warning! this is not safe link");
+}
+}
+</script>
+</body>
+</html>
